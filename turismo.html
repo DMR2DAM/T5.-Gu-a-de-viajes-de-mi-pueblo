@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Sitios Turísticos y Naturaleza · Guía Torrevieja</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .dark body { background-color: #111418; color: #e1e2e8; }
+    .dark header, .dark aside, .dark nav.fixed { background-color: rgba(17, 20, 24, 0.88); color: #e1e2e8; }
+    .dark .text-on-surface { color: #e1e2e8; }
+    .dark .text-on-surface-variant { color: #c0c7d0; }
+    .dark .bg-surface { background-color: #111418; }
+    .dark .bg-surface-container-low { background-color: #191c20; }
+    .dark .bg-surface-container { background-color: #1d2024; }
+    .dark .bg-surface-container-high { background-color: #282a2f; }
+    .dark .bg-surface-container-lowest { background-color: #191c20; }
+    .dark .bg-primary-container { background-color: #004b71; }
+    .dark .text-on-primary-container { color: #cbe6ff; }
+    .dark .bg-secondary-container { background-color: #374955; }
+    .dark .text-on-secondary-fixed, .dark .text-on-secondary-container { color: #d2e5f5; }
+    .dark .text-primary { color: #8ecdff; }
+    .dark .bg-primary { background-color: #8ecdff; }
+    .dark .text-on-primary { color: #00344f; }
+    .dark .text-tertiary { color: #ffb0c8; }
+    .dark .bg-tertiary-container { background-color: #7a2949; }
+    .dark .text-on-tertiary-container { color: #ffd9e2; }
+    .dark .bg-surface\/90 { background-color: rgba(25, 28, 32, 0.92) !important; color: #e1e2e8 !important; border: 1px solid rgba(192, 199, 208, 0.16); }
+    .dark .bg-surface-container-lowest\/95 { background-color: rgba(25, 28, 32, 0.96) !important; color: #e1e2e8 !important; border: 1px solid rgba(192, 199, 208, 0.16); }
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    main { animation: fadeSlideIn 0.28s ease-out; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-container": "#556774",
+            "on-primary-fixed-variant": "#004b71",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#191c20",
+            "tertiary": "#7a2849",
+            "surface-container-low": "#f2f3f9",
+            "surface-container-highest": "#e1e2e8",
+            "surface-tint": "#006494",
+            "on-tertiary-fixed-variant": "#7b2949",
+            "surface-dim": "#d8dae0",
+            "primary": "#004b71",
+            "on-surface-variant": "#40484f",
+            "on-secondary-fixed": "#0a1d29",
+            "inverse-primary": "#8ecdff",
+            "on-tertiary-fixed": "#3e001d",
+            "tertiary-fixed-dim": "#ffb0c8",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c0c7d0",
+            "surface-container-high": "#e7e8ee",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#b6c9d8",
+            "on-tertiary-container": "#ffcad9",
+            "tertiary-container": "#984061",
+            "surface-container": "#eceef3",
+            "on-secondary-fixed-variant": "#374955",
+            "on-primary-fixed": "#001e30",
+            "primary-container": "#006494",
+            "primary-fixed-dim": "#8ecdff",
+            "surface-variant": "#e1e2e8",
+            "primary-fixed": "#cbe6ff",
+            "secondary": "#4f616e",
+            "tertiary-fixed": "#ffd9e2",
+            "surface-bright": "#f8f9ff",
+            "on-surface": "#191c20",
+            "on-tertiary": "#ffffff",
+            "outline": "#707880",
+            "surface": "#f8f9ff",
+            "inverse-on-surface": "#eff0f6",
+            "secondary-container": "#d2e5f5",
+            "error-container": "#ffdad6",
+            "on-primary-container": "#b6ddff",
+            "on-primary": "#ffffff",
+            "background": "#f8f9ff",
+            "inverse-surface": "#2e3135",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#d2e5f5"
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: { "space-md": "1rem", "space-xl": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "1.5rem", "gutter": "1rem", "space-lg": "1.5rem" },
+          fontFamily: {
+            "display-md-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"],
+            "display-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "display-md-mobile": ["32px", { lineHeight: "40px", fontWeight: "400" }],
+            "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0.25px", fontWeight: "400" }],
+            "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.1px", fontWeight: "600" }],
+            "display-md": ["45px", { lineHeight: "52px", fontWeight: "400" }],
+            "title-md": ["16px", { lineHeight: "24px", letterSpacing: "0.15px", fontWeight: "600" }],
+            "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0.5px", fontWeight: "400" }],
+            "headline-md": ["28px", { lineHeight: "36px", fontWeight: "500" }],
+            "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+            "title-lg": ["22px", { lineHeight: "28px", fontWeight: "500" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.5px", fontWeight: "600" }],
+            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "500" }],
+            "display-lg": ["57px", { lineHeight: "64px", letterSpacing: "-0.25px", fontWeight: "400" }],
+            "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.25px", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+
+
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface transition-colors duration-300"><aside class="hidden lg:flex fixed left-0 top-0 h-full w-24 bg-surface-container-low z-50 flex-col items-center py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a href="index.html" title="Ir al inicio" class="mb-space-xl flex items-center justify-center w-12 h-12 rounded-xl bg-primary text-on-primary hover:opacity-90 transition-opacity"><span class="material-symbols-outlined">beach_access</span></a><nav class="flex-1 flex flex-col items-center gap-space-md w-full px-space-sm"><a class="flex flex-col items-center justify-center w-full py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="index.html"><span class="material-symbols-outlined mb-1">explore</span><span class="font-label-md text-label-md">Explorar</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-full py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold" href="turismo.html"><span class="material-symbols-outlined mb-1">photo_camera</span><span class="font-label-md text-label-md">Turismo</span></a><a class="flex flex-col items-center justify-center w-full py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="gastronomia.html"><span class="material-symbols-outlined mb-1">restaurant</span><span class="font-label-md text-label-md">Gastronomía</span></a><a class="flex flex-col items-center justify-center w-full py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="deportes.html"><span class="material-symbols-outlined mb-1">kayaking</span><span class="font-label-md text-label-md">Deportes</span></a></nav></aside><div class="lg:pl-24"><header class="fixed top-0 left-0 lg:left-24 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-margin flex items-center justify-between"><a href="index.html" class="font-title-lg text-title-lg text-on-surface hover:text-primary transition-colors">Guía Torrevieja</a><div class="flex items-center gap-space-sm"><button id="download-favs-header" onclick="downloadFavoritesTxt()" title="Descargar favoritos en .txt" aria-label="Descargar favoritos en formato TXT" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed hover:opacity-90 transition-opacity font-label-md text-label-md cursor-pointer" type="button"><span class="material-symbols-outlined text-[18px]">download</span><span class="hidden sm:inline">Favoritos (.txt)</span><span id="fav-count-badge" class="px-1.5 py-0.2 rounded-full bg-primary text-on-primary text-[11px] font-bold">0</span></button><button id="theme-toggle" aria-label="Cambiar tema" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors cursor-pointer" type="button"><span id="theme-icon" class="material-symbols-outlined">dark_mode</span></button></div></div></header><main class="w-full pt-16 pb-20 lg:pb-space-xl px-margin bg-surface min-h-screen transition-all duration-300">
+<div class="flex flex-col w-full">
+<section class="py-space-lg flex flex-col gap-space-md">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+    <div class="flex flex-col gap-space-xs max-w-2xl">
+      <span class="font-label-md text-label-md uppercase tracking-wider text-primary">02 / Patrimonio y Entorno</span>
+      <h1 class="font-headline-lg text-headline-lg text-on-surface">Sitios Turísticos y Naturaleza</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">
+        Espacios naturales singulares, historia marítima y paseos frente al Mediterráneo en Torrevieja.
+      </p>
+    </div>
+    <div class="flex items-center gap-space-sm px-space-md py-2.5 rounded-full bg-surface-container-low text-on-surface-variant self-start md:self-auto" data-live-weather-widget="turismo">
+      <span class="material-symbols-outlined text-[18px] text-primary" data-weather-field="weather-icon">wb_sunny</span>
+      <span class="font-label-md text-label-md" data-weather-field="clima-turismo">24°C · Viento 14 km/h</span>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-space-sm overflow-x-auto pb-1" id="turismo-filters">
+    <button class="filter-chip inline-flex items-center gap-1.5 px-space-md py-2 rounded-full font-label-lg text-label-lg bg-secondary-container text-on-secondary-fixed transition-all shrink-0 cursor-pointer" data-filter="todos" type="button">
+      <span class="material-symbols-outlined text-[18px] chip-check">check</span><span>Todos</span>
+    </button>
+    <button class="filter-chip inline-flex items-center gap-1.5 px-space-md py-2 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0 cursor-pointer" data-filter="naturaleza" type="button">
+      <span class="material-symbols-outlined text-[18px] chip-check hidden">check</span><span>Naturaleza</span>
+    </button>
+    <button class="filter-chip inline-flex items-center gap-1.5 px-space-md py-2 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0 cursor-pointer" data-filter="cultura" type="button">
+      <span class="material-symbols-outlined text-[18px] chip-check hidden">check</span><span>Cultura</span>
+    </button>
+    <button class="filter-chip inline-flex items-center gap-1.5 px-space-md py-2 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0 cursor-pointer" data-filter="historia" type="button">
+      <span class="material-symbols-outlined text-[18px] chip-check hidden">check</span><span>Historia</span>
+    </button>
+    <button class="filter-chip inline-flex items-center gap-1.5 px-space-md py-2 rounded-full font-label-lg text-label-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0 cursor-pointer" data-filter="paseo" type="button">
+      <span class="material-symbols-outlined text-[18px] chip-check hidden">check</span><span>Paseo</span>
+    </button>
+  </div>
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg pb-space-xl" id="turismo-grid">
+  <article class="turismo-card group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-category="naturaleza">
+    <a href="detalle.html?id=laguna-rosa" class="relative aspect-video w-full overflow-hidden bg-surface-container block">
+      <img alt="Laguna Rosa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./Sitios%20Tur%C3%ADsticos%20y%20Naturaleza/Laguna%20Rosa.png"/>
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md">Naturaleza</span>
+    </a>
+    <div class="flex flex-col flex-1 p-space-md justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <h2 class="font-title-md text-title-md text-on-surface">Laguna Rosa</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Laguna salada de color rosado único por bacterias y microalgas. Ideal al atardecer y para ver flamencos. Prohibido el baño.</p>
+        <div class="flex items-center gap-1 text-on-surface-variant pt-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="font-body-md text-body-md">Parque Natural de las Lagunas de La Mata y Torrevieja</span>
+        </div>
+      </div>
+      <a href="detalle.html?id=laguna-rosa" class="w-full inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">
+        <span>Ver detalles</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="turismo-card group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-category="cultura">
+    <a href="detalle.html?id=submarino-s61" class="relative aspect-video w-full overflow-hidden bg-surface-container block">
+      <img alt="Submarino S-61 Delfín (Museo Flotante)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./Sitios%20Tur%C3%ADsticos%20y%20Naturaleza/Submarino%20S-61%20Delf%C3%ADn%20(Museo%20Flotante).png"/>
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md">Cultura</span>
+    </a>
+    <div class="flex flex-col flex-1 p-space-md justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <h2 class="font-title-md text-title-md text-on-surface">Submarino S-61 Delfín (Museo Flotante)</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Primer submarino de la Armada Española convertido en museo flotante en el puerto, con interior visitable.</p>
+        <div class="flex items-center gap-1 text-on-surface-variant pt-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="font-body-md text-body-md">Puerto de Torrevieja</span>
+        </div>
+      </div>
+      <a href="detalle.html?id=submarino-s61" class="w-full inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">
+        <span>Ver detalles</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="turismo-card group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-category="historia">
+    <a href="detalle.html?id=torre-moro" class="relative aspect-video w-full overflow-hidden bg-surface-container block">
+      <img alt="Torre del Moro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./Sitios%20Tur%C3%ADsticos%20y%20Naturaleza/Torre%20del%20Moro.png"/>
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md">Historia</span>
+    </a>
+    <div class="flex flex-col flex-1 p-space-md justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <h2 class="font-title-md text-title-md text-on-surface">Torre del Moro</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Antigua torre vigía del siglo XIV en Cabo Cervera con zona ajardinada y vistas panorámicas a la bahía.</p>
+        <div class="flex items-center gap-1 text-on-surface-variant pt-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="font-body-md text-body-md">Cabo Cervera, Torrevieja</span>
+        </div>
+      </div>
+      <a href="detalle.html?id=torre-moro" class="w-full inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">
+        <span>Ver detalles</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="turismo-card group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-category="paseo">
+    <a href="detalle.html?id=dique-levante" class="relative aspect-video w-full overflow-hidden bg-surface-container block">
+      <img alt="Dique de Levante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./Sitios%20Tur%C3%ADsticos%20y%20Naturaleza/Dique%20de%20Levante.png"/>
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md">Paseo</span>
+    </a>
+    <div class="flex flex-col flex-1 p-space-md justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <h2 class="font-title-md text-title-md text-on-surface">Dique de Levante</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Amplio paseo marítimo y espigón sobre el Mediterráneo ideal para caminar y disfrutar de la brisa marina.</p>
+        <div class="flex items-center gap-1 text-on-surface-variant pt-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="font-body-md text-body-md">Paseo Marítimo Juan Aparicio</span>
+        </div>
+      </div>
+      <a href="detalle.html?id=dique-levante" class="w-full inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">
+        <span>Ver detalles</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="turismo-card group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-category="naturaleza">
+    <a href="detalle.html?id=salinas-torrevieja" class="relative aspect-video w-full overflow-hidden bg-surface-container block">
+      <img alt="Salinas de Torrevieja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./Sitios%20Tur%C3%ADsticos%20y%20Naturaleza/Salinas.png"/>
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md">Naturaleza</span>
+    </a>
+    <div class="flex flex-col flex-1 p-space-md justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <h2 class="font-title-md text-title-md text-on-surface">Salinas de Torrevieja</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Explotación salinera histórica y paraje natural de gran valor ecológico y paisajístico en Torrevieja.</p>
+        <div class="flex items-center gap-1 text-on-surface-variant pt-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="font-body-md text-body-md">Parque Natural de las Lagunas de La Mata y Torrevieja</span>
+        </div>
+      </div>
+      <a href="detalle.html?id=salinas-torrevieja" class="w-full inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">
+        <span>Ver detalles</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="turismo-card group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-category="cultura">
+    <a href="detalle.html?id=museo-mar-sal" class="relative aspect-video w-full overflow-hidden bg-surface-container block">
+      <img alt="Museo del Mar y de la Sal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./Sitios%20Tur%C3%ADsticos%20y%20Naturaleza/Museo%20del%20mar%20y%20de%20la%20sal.png"/>
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md">Cultura</span>
+    </a>
+    <div class="flex flex-col flex-1 p-space-md justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <h2 class="font-title-md text-title-md text-on-surface">Museo del Mar y de la Sal</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Espacio cultural dedicado a la tradición salinera, la pesca y la historia marítima de Torrevieja.</p>
+        <div class="flex items-center gap-1 text-on-surface-variant pt-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="font-body-md text-body-md">Centro · Torrevieja</span>
+        </div>
+      </div>
+      <a href="detalle.html?id=museo-mar-sal" class="w-full inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">
+        <span>Ver detalles</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="turismo-card group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-category="paseo">
+    <a href="detalle.html?id=puerto-pesquero" class="relative aspect-video w-full overflow-hidden bg-surface-container block">
+      <img alt="Puerto Pesquero de Torrevieja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./Sitios%20Tur%C3%ADsticos%20y%20Naturaleza/Puerto%20Pesquero.png"/>
+      <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-md text-label-md">Paseo</span>
+    </a>
+    <div class="flex flex-col flex-1 p-space-md justify-between gap-space-md">
+      <div class="flex flex-col gap-space-xs">
+        <h2 class="font-title-md text-title-md text-on-surface">Puerto Pesquero de Torrevieja</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">Muelle y actividad pesquera tradicional en el puerto con ambiente marinero y vistas al Mediterráneo.</p>
+        <div class="flex items-center gap-1 text-on-surface-variant pt-1">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="font-body-md text-body-md">Puerto de Torrevieja</span>
+        </div>
+      </div>
+      <a href="detalle.html?id=puerto-pesquero" class="w-full inline-flex items-center justify-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">
+        <span>Ver detalles</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </article>
+</section>
+
+
+
+<section class="pb-space-xl" id="mapa-turismo-interactivo">
+  <div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+      <div>
+        <span class="font-label-md text-label-md uppercase tracking-wider text-primary">Google Maps · Ubicaciones de esta sección</span>
+        <h2 class="font-headline-sm text-headline-sm text-on-surface" id="mapa-turismo-heading">Mapa de Sitios Turísticos y Naturaleza (7 ubicaciones)</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant" id="mapa-turismo-info">Selecciona una ubicación del desplegable para ver su marcador nativo en Google Maps.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <select id="mapa-turismo-select" aria-label="Seleccionar ubicación en el mapa" class="px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md border border-outline-variant/40 shadow-sm cursor-pointer"></select>
+        <a id="mapa-turismo-ext" href="https://www.google.com/maps/search/?api=1&query=Torrevieja%2C+Alicante" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:opacity-90 transition-opacity">
+          <span class="material-symbols-outlined text-[18px]">map</span>
+          <span>Google Maps</span>
+        </a>
+      </div>
+    </div>
+    <div id="mapa-turismo-canvas" class="w-full h-80 sm:h-96 rounded-xl overflow-hidden shadow-md bg-surface-container z-10"></div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    function bootMap() {
+      if (typeof window.initTorreviejaSectionMap === 'function') {
+        window.initTorreviejaSectionMap({
+          containerId: 'mapa-turismo-canvas',
+          selectId: 'mapa-turismo-select',
+          infoId: 'mapa-turismo-info',
+          externalLinkId: 'mapa-turismo-ext',
+          placeIds: ["laguna-rosa", "submarino-s61", "torre-moro", "dique-levante", "salinas-torrevieja", "museo-mar-sal", "puerto-pesquero"],
+          defaultSelectedId: '',
+          heightClass: 'h-80 sm:h-96'
+        });
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bootMap);
+    } else {
+      bootMap();
+    }
+  })();
+</script>
+</div>
+<script>
+  (function () {
+    const chips = document.querySelectorAll('#turismo-filters .filter-chip');
+    const cards = document.querySelectorAll('.turismo-card');
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const filter = chip.getAttribute('data-filter');
+        chips.forEach((c) => {
+          c.classList.remove('bg-secondary-container', 'text-on-secondary-fixed');
+          c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          const check = c.querySelector('.chip-check');
+          if (check) check.classList.add('hidden');
+        });
+        chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        chip.classList.add('bg-secondary-container', 'text-on-secondary-fixed');
+        const activeCheck = chip.querySelector('.chip-check');
+        if (activeCheck) activeCheck.classList.remove('hidden');
+
+        cards.forEach((card) => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'todos' || cat === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+
+  })();
+</script>
+</main></div><nav class="lg:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)] z-50 flex items-center justify-around px-space-sm"><a class="flex flex-col items-center justify-center px-space-md py-1 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="index.html"><span class="material-symbols-outlined text-[20px]">explore</span><span class="font-label-md text-label-md">Explorar</span></a><a aria-current="page" class="flex flex-col items-center justify-center px-space-md py-1 rounded-full transition-all bg-primary-container text-on-primary-container font-semibold" href="turismo.html"><span class="material-symbols-outlined text-[20px]">photo_camera</span><span class="font-label-md text-label-md">Turismo</span></a><a class="flex flex-col items-center justify-center px-space-md py-1 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="gastronomia.html"><span class="material-symbols-outlined text-[20px]">restaurant</span><span class="font-label-md text-label-md">Gastronomía</span></a><a class="flex flex-col items-center justify-center px-space-md py-1 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" href="deportes.html"><span class="material-symbols-outlined text-[20px]">kayaking</span><span class="font-label-md text-label-md">Deportes</span></a></nav>
+    <script>
+      (function() {
+        const btn = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-icon');
+        function syncIcon() {
+          if (!icon) return;
+          icon.textContent = document.documentElement.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+        }
+        syncIcon();
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            syncIcon();
+          });
+        }
+      })();
+    </script>
+    
+    <script>
+      (function() {
+        const FAV_PLACES = {
+          "laguna-rosa": { title: "Laguna Rosa", category: "Sitios Turísticos y Naturaleza", location: "Parque Natural de las Lagunas de La Mata y Torrevieja", address: "Parque Natural de las Lagunas de La Mata y Torrevieja, 03184 Torrevieja, Alicante.", desc: "Laguna salada de color rosado único por bacterias y microalgas. Ideal al atardecer y para ver flamencos. Prohibido el baño." },
+          "submarino-s61": { title: "Submarino S-61 Delfín (Museo Flotante)", category: "Sitios Turísticos y Naturaleza", location: "Puerto de Torrevieja", address: "Muelle Pesquero / Puerto de Torrevieja, 03181 Torrevieja, Alicante.", desc: "Primer submarino de la Armada Española convertido en museo flotante en el puerto, con interior visitable." },
+          "torre-moro": { title: "Torre del Moro", category: "Sitios Turísticos y Naturaleza", location: "Cabo Cervera, Torrevieja", address: "Av. Alfredo Nobel, 134, Cabo Cervera, 03183 Torrevieja, Alicante.", desc: "Antigua torre vigía del siglo XIV en Cabo Cervera con zona ajardinada y vistas panorámicas a la bahía." },
+          "dique-levante": { title: "Dique de Levante", category: "Sitios Turísticos y Naturaleza", location: "Paseo Marítimo Juan Aparicio", address: "Dique de Levante, Paseo Vista Alegre, 03181 Torrevieja, Alicante.", desc: "Amplio paseo marítimo y espigón sobre el Mediterráneo ideal para caminar y disfrutar de la brisa marina." },
+          "meson-costa": { title: "El Mesón de la Costa", category: "Gastronomía y Restaurantes", location: "Centro · Torrevieja", address: "Calle Ramón y Cajal, 27, 03182 Torrevieja, Alicante.", desc: "Cocina mediterránea tradicional, pescados de lonja y carnes seleccionadas en pleno corazón de Torrevieja." },
+          "las-columnas": { title: "Restaurante Las Columnas", category: "Gastronomía y Restaurantes", location: "Playa del Cura · Torrevieja", address: "Av. de los Marineros, 25, Playa del Cura, 03182 Torrevieja, Alicante.", desc: "Arroces mediterráneos, arroz a banda y platos marineros frente al mar en primera línea de Playa del Cura." },
+          "nautilus": { title: "Nautilus", category: "Gastronomía y Restaurantes", location: "Costa / Rocío del Mar", address: "Calle Acantilado, 1, Rocío del Mar, 03185 Torrevieja, Alicante.", desc: "Cocina mediterránea, arroces, tapas y vistas privilegiadas al entorno costero." },
+          "club-nautico": { title: "Real Club Náutico de Torrevieja", category: "Deportes y Actividades", location: "Puerto de Torrevieja", address: "Paseo Vista Alegre, s/n, 03181 Torrevieja, Alicante.", desc: "Vela, remo, kayak y actividades náuticas en el puerto deportivo de Torrevieja." },
+          "via-verde": { title: "Vía Verde de Torrevieja", category: "Deportes y Actividades", location: "Entorno de las lagunas saladas", address: "Antiguo trazado ferroviario junto a las Salinas, Torrevieja, Alicante.", desc: "Ciclismo, running y senderismo en ruta llana acondicionada junto a las salinas." },
+          "parque-la-mata": { title: "Parque de La Mata", category: "Deportes y Actividades", location: "La Mata, Torrevieja", address: "Carretera N-332, La Mata, 03188 Torrevieja, Alicante.", desc: "Senderismo, running, paseos en bici y naturaleza entre pinos, dunas y observatorios de aves." },
+          "parque-la-siesta": { title: "Parque de La Siesta", category: "Deportes y Actividades", location: "Urbanización La Siesta / El Chaparral", address: "Urbanización La Siesta, 03184 Torrevieja, Alicante.", desc: "Deporte al aire libre, zonas verdes, pistas recreativas, paseo y actividad familiar." },
+          "ciudad-deportiva": { title: "Ciudad Deportiva", category: "Deportes y Actividades", location: "Ciudad Deportiva de Torrevieja", address: "Av. Monge y Bielsa, s/n, 03183 Torrevieja, Alicante.", desc: "Pistas deportivas, raqueta, atletismo, piscina olímpica y entrenamiento de alto nivel." },
+          "salinas-torrevieja": { title: "Salinas de Torrevieja", category: "Sitios Turísticos y Naturaleza", location: "Parque Natural de las Lagunas de La Mata y Torrevieja", address: "Parque Natural de las Lagunas de La Mata y Torrevieja, 03184 Torrevieja, Alicante.", desc: "Explotación salinera histórica y paraje natural de gran valor ecológico y paisajístico en Torrevieja." },
+          "museo-mar-sal": { title: "Museo del Mar y de la Sal", category: "Sitios Turísticos y Naturaleza", location: "Centro · Torrevieja", address: "Calle Patricio Pérez, 1, 03181 Torrevieja, Alicante.", desc: "Espacio cultural dedicado a la tradición salinera, la pesca y la historia marítima de Torrevieja." },
+          "puerto-pesquero": { title: "Puerto Pesquero de Torrevieja", category: "Sitios Turísticos y Naturaleza", location: "Puerto de Torrevieja", address: "Muelle Pesquero / Puerto de Torrevieja, 03181 Torrevieja, Alicante.", desc: "Muelle y actividad pesquera tradicional en el puerto con ambiente marinero y vistas al Mediterráneo." }
+        };
+
+        window.getSavedFavorites = function() {
+          try {
+            const raw = localStorage.getItem('torrevieja_favorites');
+            const arr = raw ? JSON.parse(raw) : [];
+            return Array.isArray(arr) ? arr : [];
+          } catch (e) {
+            return [];
+          }
+        };
+
+        window.updateFavCountBadge = function() {
+          const favs = window.getSavedFavorites();
+          const badge = document.getElementById('fav-count-badge');
+          if (badge) {
+            badge.textContent = favs.length;
+          }
+        };
+
+        window.downloadFavoritesTxt = function() {
+          const favIds = window.getSavedFavorites();
+          if (!favIds.length) {
+            alert('Aún no tienes sitios guardados en favoritos. Entra en cualquier lugar y pulsa "Guardar en favoritos".');
+            return;
+          }
+          const lines = [
+            '====================================================',
+            '  MIS SITIOS FAVORITOS · GUÍA TORREVIEJA',
+            '====================================================',
+            ''
+          ];
+          favIds.forEach((id, idx) => {
+            const p = FAV_PLACES[id];
+            if (p) {
+              lines.push(`${idx + 1}. ${p.title}`);
+              lines.push(`   Categoría: ${p.category}`);
+              lines.push(`   Ubicación: ${p.location}`);
+              lines.push(`   Dirección: ${p.address}`);
+              lines.push(`   Descripción: ${p.desc}`);
+              lines.push('');
+            }
+          });
+          lines.push('Generado desde Guía Torrevieja');
+          const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'favoritos-torrevieja.txt';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        };
+
+        document.addEventListener('DOMContentLoaded', window.updateFavCountBadge);
+        window.updateFavCountBadge();
+      })();
+    </script>
+
+    <script>
+      (function() {
+        const LAT = 37.9786;
+        const LNG = -0.6822;
+        const REFRESH_MS = 10 * 60 * 1000;
+        const CACHE_KEY = 'torrevieja_realtime_weather_v1';
+
+        const WMO_LABELS = {
+          0: { text: 'Despejado', icon: 'wb_sunny' },
+          1: { text: 'Mayormente despejado', icon: 'partly_cloudy_day' },
+          2: { text: 'Parcialmente nublado', icon: 'partly_cloudy_day' },
+          3: { text: 'Nublado', icon: 'cloud' },
+          45: { text: 'Niebla', icon: 'foggy' },
+          48: { text: 'Niebla helada', icon: 'foggy' },
+          51: { text: 'Llovizna débil', icon: 'rainy' },
+          53: { text: 'Llovizna', icon: 'rainy' },
+          55: { text: 'Llovizna intensa', icon: 'rainy' },
+          61: { text: 'Lluvia débil', icon: 'rainy' },
+          63: { text: 'Lluvia moderada', icon: 'rainy' },
+          65: { text: 'Lluvia fuerte', icon: 'rainy' },
+          80: { text: 'Chubascos', icon: 'rainy' },
+          81: { text: 'Chubascos moderados', icon: 'rainy' },
+          82: { text: 'Chubascos fuertes', icon: 'thunderstorm' },
+          95: { text: 'Tormenta', icon: 'thunderstorm' }
+        };
+
+        function describeWmo(code) {
+          return WMO_LABELS[code] || { text: 'Variable', icon: 'partly_cloudy_day' };
+        }
+
+        function formatHourMinute(isoOrDate) {
+          const d = isoOrDate instanceof Date ? isoOrDate : new Date(isoOrDate);
+          if (Number.isNaN(d.getTime())) return '--:--';
+          return d.toLocaleTimeString('es-ES', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+            timeZone: 'Europe/Madrid'
+          });
+        }
+
+        function formatSeaState(waveHeight) {
+          if (typeof waveHeight !== 'number' || Number.isNaN(waveHeight)) return 'Calma';
+          if (waveHeight < 0.3) return 'Calma';
+          if (waveHeight < 0.8) return 'Rizada';
+          if (waveHeight < 1.5) return 'Marejadilla';
+          return 'Marejada';
+        }
+
+        function computeFallbackSun(dateObj = new Date()) {
+          const start = new Date(dateObj.getFullYear(), 0, 0);
+          const dayOfYear = Math.floor((dateObj - start) / 86400000);
+          const isDst = /GMT\+2|CEST/i.test(dateObj.toString());
+          const offsetHours = isDst ? 2 : 1;
+          const rad = (Math.PI / 180) * ((360 / 365) * (dayOfYear - 81));
+          const eqTime = 9.87 * Math.sin(2 * rad) - 7.53 * Math.cos(rad) - 1.5 * Math.sin(rad);
+          const solarNoon = 12 - (LNG * 4 + eqTime) / 60 + offsetHours;
+          const latRad = (Math.PI / 180) * LAT;
+          const declRad = (Math.PI / 180) * (23.44 * Math.sin(((2 * Math.PI) / 365) * (dayOfYear - 81)));
+          const cosHa = Math.max(-1, Math.min(1, -Math.tan(latRad) * Math.tan(declRad)));
+          const haHours = (Math.acos(cosHa) * 180) / Math.PI / 15;
+          const sunriseMin = Math.round((solarNoon - haHours) * 60);
+          const sunsetMin = Math.round((solarNoon + haHours) * 60);
+          const fmt = (mins) => {
+            const m = ((mins % 1440) + 1440) % 1440;
+            return `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
+          };
+          return { sunrise: fmt(sunriseMin), sunset: fmt(sunsetMin) };
+        }
+
+        function buildWeatherPayload(weatherJson, marineJson) {
+          const cur = weatherJson && weatherJson.current ? weatherJson.current : {};
+          const daily = weatherJson && weatherJson.daily ? weatherJson.daily : {};
+          const mCur = marineJson && marineJson.current ? marineJson.current : {};
+
+          const temp = typeof cur.temperature_2m === 'number' ? Math.round(cur.temperature_2m) : null;
+          const wmo = describeWmo(cur.weather_code);
+          const windKmh = typeof cur.wind_speed_10m === 'number' ? Math.round(cur.wind_speed_10m) : null;
+          const windKnots = windKmh !== null ? Math.round(windKmh * 0.539957) : null;
+
+          const seaTemp = typeof mCur.sea_surface_temperature === 'number'
+            ? Math.round(mCur.sea_surface_temperature)
+            : (temp !== null ? Math.max(13, Math.min(28, temp - 2)) : null);
+          const seaState = formatSeaState(mCur.wave_height);
+
+          const fbSun = computeFallbackSun(new Date());
+          const sunrise = Array.isArray(daily.sunrise) && daily.sunrise[0]
+            ? formatHourMinute(daily.sunrise[0])
+            : fbSun.sunrise;
+          const sunset = Array.isArray(daily.sunset) && daily.sunset[0]
+            ? formatHourMinute(daily.sunset[0])
+            : fbSun.sunset;
+
+          const tMax = Array.isArray(daily.temperature_2m_max) && typeof daily.temperature_2m_max[0] === 'number'
+            ? Math.round(daily.temperature_2m_max[0])
+            : null;
+          const tMin = Array.isArray(daily.temperature_2m_min) && typeof daily.temperature_2m_min[0] === 'number'
+            ? Math.round(daily.temperature_2m_min[0])
+            : null;
+          const precipProb = Array.isArray(daily.precipitation_probability_max) && typeof daily.precipitation_probability_max[0] === 'number'
+            ? daily.precipitation_probability_max[0]
+            : null;
+
+          const nowStr = new Date().toLocaleTimeString('es-ES', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+            timeZone: 'Europe/Madrid'
+          });
+
+          const forecastParts = [wmo.text];
+          if (tMin !== null && tMax !== null) forecastParts.push(`Min ${tMin}° / Max ${tMax}°`);
+          if (precipProb !== null) forecastParts.push(`Lluvia ${precipProb}%`);
+          forecastParts.push(`Act. ${nowStr} h`);
+
+          return {
+            tempText: temp !== null ? `${temp}°C · ${wmo.text}` : wmo.text,
+            shortTempText: temp !== null ? `${temp}°C · ${windKmh !== null ? `Viento ${windKmh} km/h` : wmo.text}` : wmo.text,
+            seaText: seaTemp !== null ? `${seaTemp}°C · ${seaState}` : seaState,
+            airSeaCompact: `${temp !== null ? `${temp}°C` : '--°C'} · Agua ${seaTemp !== null ? `${seaTemp}°C` : '--°C'}`,
+            windKnotsText: windKnots !== null ? `${windKnots} nudos` : '-- nudos',
+            sunrise,
+            sunset,
+            sunText: `${sunset} h`,
+            sunRangeText: `Amanecer ${sunrise} h · Atardecer ${sunset} h`,
+            forecastText: forecastParts.join(' · '),
+            icon: wmo.icon,
+            fetchedAt: Date.now()
+          };
+        }
+
+        function applyWeatherToDOM(data) {
+          if (!data) return;
+
+          document.querySelectorAll('[data-weather-field="clima-hoy"]').forEach((el) => {
+            el.textContent = data.tempText;
+          });
+          document.querySelectorAll('[data-weather-field="clima-turismo"]').forEach((el) => {
+            el.textContent = data.shortTempText;
+          });
+          document.querySelectorAll('[data-weather-field="agua-mar"]').forEach((el) => {
+            el.textContent = data.seaText;
+          });
+          document.querySelectorAll('[data-weather-field="air-sea-temp"]').forEach((el) => {
+            el.textContent = data.airSeaCompact;
+          });
+          document.querySelectorAll('[data-weather-field="wind-knots"]').forEach((el) => {
+            el.textContent = data.windKnotsText;
+          });
+          document.querySelectorAll('[data-weather-field="atardecer"]').forEach((el) => {
+            el.textContent = data.sunText;
+          });
+          document.querySelectorAll('[data-weather-field="sun-times"]').forEach((el) => {
+            el.textContent = data.sunRangeText;
+          });
+          document.querySelectorAll('[data-weather-field="forecast-summary"]').forEach((el) => {
+            el.textContent = data.forecastText;
+          });
+          document.querySelectorAll('[data-weather-field="weather-icon"]').forEach((el) => {
+            if (data.icon) el.textContent = data.icon;
+          });
+        }
+
+        async function fetchRealtimeWeather() {
+          try {
+            const cachedRaw = sessionStorage.getItem(CACHE_KEY);
+            if (cachedRaw) {
+              const cached = JSON.parse(cachedRaw);
+              if (cached && cached.fetchedAt && (Date.now() - cached.fetchedAt) < REFRESH_MS) {
+                applyWeatherToDOM(cached);
+              }
+            }
+          } catch (e) {}
+
+          try {
+            const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LNG}&current=temperature_2m,weather_code,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&timezone=Europe%2FMadrid&forecast_days=1`;
+            const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${LAT}&longitude=${LNG}&current=sea_surface_temperature,wave_height&timezone=Europe%2FMadrid`;
+
+            const [wRes, mRes] = await Promise.allSettled([
+              fetch(weatherUrl, { cache: 'no-store' }),
+              fetch(marineUrl, { cache: 'no-store' })
+            ]);
+
+            const weatherJson = (wRes.status === 'fulfilled' && wRes.value.ok) ? await wRes.value.json() : null;
+            const marineJson = (mRes.status === 'fulfilled' && mRes.value.ok) ? await mRes.value.json() : null;
+
+            if (weatherJson || marineJson) {
+              const payload = buildWeatherPayload(weatherJson, marineJson);
+              applyWeatherToDOM(payload);
+              try {
+                sessionStorage.setItem(CACHE_KEY, JSON.stringify(payload));
+              } catch (e) {}
+            } else {
+              const fbSun = computeFallbackSun(new Date());
+              document.querySelectorAll('[data-weather-field="sun-times"]').forEach((el) => {
+                el.textContent = `Amanecer ${fbSun.sunrise} h · Atardecer ${fbSun.sunset} h`;
+              });
+            }
+          } catch (e) {
+            const fbSun = computeFallbackSun(new Date());
+            document.querySelectorAll('[data-weather-field="sun-times"]').forEach((el) => {
+              el.textContent = `Amanecer ${fbSun.sunrise} h · Atardecer ${fbSun.sunset} h`;
+            });
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', fetchRealtimeWeather);
+        } else {
+          fetchRealtimeWeather();
+        }
+        setInterval(fetchRealtimeWeather, REFRESH_MS);
+      })();
+    </script>
+
+<script>
+(function() {
+  const TORREVIEJA_LOCATIONS = {
+    "laguna-rosa": {
+      id: "laguna-rosa",
+      title: "Laguna Rosa",
+      section: "turismo",
+      category: "Sitios Turísticos y Naturaleza",
+      location: "Parque Natural de las Lagunas de La Mata y Torrevieja",
+      address: "Parque Natural de las Lagunas de La Mata y Torrevieja, 03184 Torrevieja, Alicante.",
+      query: "Laguna Rosa, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=laguna-rosa"
+    },
+    "submarino-s61": {
+      id: "submarino-s61",
+      title: "Submarino S-61 Delfín",
+      section: "turismo",
+      category: "Sitios Turísticos y Naturaleza",
+      location: "Puerto de Torrevieja",
+      address: "Muelle Pesquero / Puerto de Torrevieja, 03181 Torrevieja, Alicante.",
+      query: "Submarino S-61 Delfin, Puerto de Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=submarino-s61"
+    },
+    "torre-moro": {
+      id: "torre-moro",
+      title: "Torre del Moro",
+      section: "turismo",
+      category: "Sitios Turísticos y Naturaleza",
+      location: "Cabo Cervera, Torrevieja",
+      address: "Av. Alfredo Nobel, 134, Cabo Cervera, 03183 Torrevieja, Alicante.",
+      query: "Torre del Moro, Cabo Cervera, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=torre-moro"
+    },
+    "dique-levante": {
+      id: "dique-levante",
+      title: "Dique de Levante",
+      section: "turismo",
+      category: "Sitios Turísticos y Naturaleza",
+      location: "Paseo Marítimo Juan Aparicio",
+      address: "Dique de Levante, Paseo Vista Alegre, 03181 Torrevieja, Alicante.",
+      query: "Dique de Levante, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=dique-levante"
+    },
+    "salinas-torrevieja": {
+      id: "salinas-torrevieja",
+      title: "Salinas de Torrevieja",
+      section: "turismo",
+      category: "Sitios Turísticos y Naturaleza",
+      location: "Parque Natural de las Lagunas de La Mata y Torrevieja",
+      address: "Parque Natural de las Lagunas de La Mata y Torrevieja, 03184 Torrevieja, Alicante.",
+      query: "Salinas de Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=salinas-torrevieja"
+    },
+    "museo-mar-sal": {
+      id: "museo-mar-sal",
+      title: "Museo del Mar y de la Sal",
+      section: "turismo",
+      category: "Sitios Turísticos y Naturaleza",
+      location: "Centro · Torrevieja",
+      address: "Calle Patricio Pérez, 1, 03181 Torrevieja, Alicante.",
+      query: "Museo del Mar y de la Sal, Calle Patricio Perez 1, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=museo-mar-sal"
+    },
+    "puerto-pesquero": {
+      id: "puerto-pesquero",
+      title: "Puerto Pesquero",
+      section: "turismo",
+      category: "Sitios Turísticos y Naturaleza",
+      location: "Puerto de Torrevieja",
+      address: "Muelle Pesquero / Puerto de Torrevieja, 03181 Torrevieja, Alicante.",
+      query: "Puerto Pesquero de Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=puerto-pesquero"
+    },
+    "meson-costa": {
+      id: "meson-costa",
+      title: "El Mesón de la Costa",
+      section: "gastronomia",
+      category: "Gastronomía y Restaurantes",
+      location: "Centro · Torrevieja",
+      address: "Calle Ramón y Cajal, 27, 03182 Torrevieja, Alicante.",
+      query: "El Meson de la Costa, Calle Ramon y Cajal 27, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=meson-costa"
+    },
+    "las-columnas": {
+      id: "las-columnas",
+      title: "Restaurante Las Columnas",
+      section: "gastronomia",
+      category: "Gastronomía y Restaurantes",
+      location: "Playa del Cura · Torrevieja",
+      address: "Av. de los Marineros, 25, Playa del Cura, 03182 Torrevieja, Alicante.",
+      query: "Restaurante Las Columnas, Av de los Marineros 25, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=las-columnas"
+    },
+    "nautilus": {
+      id: "nautilus",
+      title: "Nautilus",
+      section: "gastronomia",
+      category: "Gastronomía y Restaurantes",
+      location: "Costa / Rocío del Mar",
+      address: "Calle Acantilado, 1, Rocío del Mar, 03185 Torrevieja, Alicante.",
+      query: "Restaurante Nautilus, Calle Acantilado 1, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=nautilus"
+    },
+    "club-nautico": {
+      id: "club-nautico",
+      title: "Real Club Náutico",
+      section: "deportes",
+      category: "Deportes y Actividades",
+      location: "Puerto de Torrevieja",
+      address: "Paseo Vista Alegre, s/n, 03181 Torrevieja, Alicante.",
+      query: "Real Club Nautico de Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=club-nautico"
+    },
+    "via-verde": {
+      id: "via-verde",
+      title: "Vía Verde de Torrevieja",
+      section: "deportes",
+      category: "Deportes y Actividades",
+      location: "Entorno de las lagunas saladas",
+      address: "Antiguo trazado ferroviario junto a las Salinas, Torrevieja, Alicante.",
+      query: "Via Verde de Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=via-verde"
+    },
+    "parque-la-mata": {
+      id: "parque-la-mata",
+      title: "Parque de La Mata",
+      section: "deportes",
+      category: "Deportes y Actividades",
+      location: "La Mata, Torrevieja",
+      address: "Carretera N-332, La Mata, 03188 Torrevieja, Alicante.",
+      query: "Parque Natural de las Lagunas de La Mata, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=parque-la-mata"
+    },
+    "parque-la-siesta": {
+      id: "parque-la-siesta",
+      title: "Parque de La Siesta",
+      section: "deportes",
+      category: "Deportes y Actividades",
+      location: "Urbanización La Siesta / El Chaparral",
+      address: "Urbanización La Siesta, 03184 Torrevieja, Alicante.",
+      query: "Parque de La Siesta, Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=parque-la-siesta"
+    },
+    "ciudad-deportiva": {
+      id: "ciudad-deportiva",
+      title: "Ciudad Deportiva",
+      section: "deportes",
+      category: "Deportes y Actividades",
+      location: "Ciudad Deportiva de Torrevieja",
+      address: "Av. Monge y Bielsa, s/n, 03183 Torrevieja, Alicante.",
+      query: "Ciudad Deportiva de Torrevieja, Alicante",
+      detailUrl: "detalle.html?id=ciudad-deportiva"
+    }
+  };
+
+  window.TORREVIEJA_LOCATIONS = TORREVIEJA_LOCATIONS;
+
+  const SECTION_DEFAULT_QUERIES = {
+    'mapa-explorar-canvas': 'Torrevieja, Alicante',
+    'mapa-turismo-canvas': 'Turismo y lugares de interés en Torrevieja, Alicante',
+    'mapa-gastronomia-canvas': 'Restaurantes en Torrevieja, Alicante',
+    'mapa-deportes-canvas': 'Instalaciones deportivas y parques en Torrevieja, Alicante'
+  };
+
+  window.initTorreviejaSectionMap = function(config) {
+    const containerId = config.containerId;
+    const selectId = config.selectId;
+    const infoId = config.infoId;
+    const externalLinkId = config.externalLinkId;
+    const placeIds = Array.isArray(config.placeIds) && config.placeIds.length
+      ? config.placeIds
+      : Object.keys(TORREVIEJA_LOCATIONS);
+    const defaultSelectedId = config.defaultSelectedId || '';
+    const heightClass = config.heightClass || 'h-80 sm:h-96';
+
+    const mapEl = document.getElementById(containerId);
+    if (!mapEl) return;
+    mapEl.className = `w-full ${heightClass} rounded-xl overflow-hidden shadow-md bg-surface-container z-10`;
+
+    const items = placeIds
+      .map((id, idx) => ({ ...TORREVIEJA_LOCATIONS[id], indexNumber: idx + 1 }))
+      .filter((x) => x && x.id);
+
+    const itemsById = {};
+    items.forEach((p) => { itemsById[p.id] = p; });
+
+    mapEl.innerHTML = '';
+    const iframe = document.createElement('iframe');
+    iframe.className = 'w-full h-full border-0';
+    iframe.loading = 'lazy';
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.setAttribute('allowfullscreen', '');
+    mapEl.appendChild(iframe);
+
+    const selectEl = selectId ? document.getElementById(selectId) : null;
+    const infoEl = infoId ? document.getElementById(infoId) : null;
+    const extLinkEl = externalLinkId ? document.getElementById(externalLinkId) : null;
+
+    if (selectEl) {
+      selectEl.innerHTML = '';
+      if (items.length > 1) {
+        const allOpt = document.createElement('option');
+        allOpt.value = '__ALL__';
+        allOpt.textContent = `Vista general (${items.length} ubicaciones en Google Maps)`;
+        selectEl.appendChild(allOpt);
+      }
+      items.forEach((place) => {
+        const opt = document.createElement('option');
+        opt.value = place.id;
+        opt.textContent = `${place.indexNumber}. ${place.title} — ${place.location}`;
+        selectEl.appendChild(opt);
+      });
+
+      selectEl.addEventListener('change', (e) => {
+        const val = e.target.value;
+        if (val === '__ALL__') {
+          showAllLocations();
+        } else {
+          selectLocation(val);
+        }
+      });
+    }
+
+    function setGoogleMapsQuery(queryText, zoomLevel) {
+      const z = zoomLevel || 13;
+      iframe.src = `https://maps.google.com/maps?q=${encodeURIComponent(queryText)}&t=&z=${z}&ie=UTF8&iwloc=B&output=embed`;
+      iframe.title = `Mapa de Google Maps: ${queryText}`;
+    }
+
+    function showAllLocations() {
+      if (selectEl) selectEl.value = '__ALL__';
+      const defaultQuery = SECTION_DEFAULT_QUERIES[containerId] || 'Torrevieja, Alicante';
+      setGoogleMapsQuery(defaultQuery, 13);
+      if (infoEl) {
+        infoEl.textContent = `Mostrando vista general de ${items.length} ubicaciones en Google Maps.`;
+      }
+      if (extLinkEl) {
+        extLinkEl.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(defaultQuery)}`;
+      }
+    }
+
+    function selectLocation(id) {
+      const place = itemsById[id];
+      if (!place) {
+        showAllLocations();
+        return;
+      }
+      if (selectEl) selectEl.value = id;
+      const q = place.query || `${place.title}, ${place.address}`;
+      setGoogleMapsQuery(q, 15);
+      if (infoEl) {
+        infoEl.textContent = `${place.indexNumber}. ${place.title} · ${place.address}`;
+      }
+      if (extLinkEl) {
+        extLinkEl.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+      }
+    }
+
+    if (defaultSelectedId && itemsById[defaultSelectedId]) {
+      selectLocation(defaultSelectedId);
+    } else if (items.length === 1) {
+      selectLocation(items[0].id);
+    } else {
+      showAllLocations();
+    }
+
+    return { selectLocation, showAllLocations, items };
+  };
+})();
+</script>
+
+</body></html>
